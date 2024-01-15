@@ -1,0 +1,32 @@
+<h1><u>Showing Student records:</u></h1>
+
+<div *ngIf="students && students.length > 0">
+    <table>
+        <thead>
+            <th>Student Id |</th>
+            <th>Student Name  |</th>
+            <th>Gender |</th>
+            <th>Subject1 |</th>
+            <th>Subject2 |</th>
+            <th>Subject3 |</th>
+            <th>Total Marks |</th>
+            <th>Percentage |</th>
+            <th>Actions </th>
+        </thead>
+
+        <tbody *ngFor="let student of students">
+            <td>{{student.studentid}}</td>
+            <td>{{student.studentName}}</td>
+            <td>{{student.gender}}</td>
+            <td>{{student.subject1}}</td>
+            <td>{{student.subject2}}</td>
+            <td>{{student.subject3}}</td>
+            <td>{{student.totalmarks}}</td>
+            <td>{{student.percentage}}</td>
+            <td><button (click)="editStudent(student)">UPDATE</button></td>
+            <td><button (click)="deleteStudent(student)">DELETE</button></td>
+        </tbody>
+    </table>
+</div>
+
+<button (click)="addStudent()">ADD</button>

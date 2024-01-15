@@ -1,0 +1,13 @@
+<h1><u>ADD STUDENT</u></h1>
+
+<form #studentForm="ngForm" (ngSubmit)="onSubmit(studentForm)">
+    <label>Student Name : </label><input type="text" name="studentName" [(ngModel)]="newStudent.studentName" placeholder="Enter Student Name"><br>
+    <label>Gender : </label> <input type="radio" name="gender" value="M" [(ngModel)]="newStudent.gender"> M
+                            <input type="radio" name="gender" value="F" [(ngModel)]="newStudent.gender"> F<br>
+    <label>Subject1 :</label><input type="number" min="0" max="100" name="subject1" placeholder="0"  [(ngModel)]="newStudent.subject1" ><br>
+    <label>Subject2 :</label><input type="number" min="0" max="100" name="subject2" placeholder="0" [(ngModel)]="newStudent.subject2"><br>
+    <label>Subject3 :</label><input type="number" min="0" max="100" name="subject3" placeholder="0"[(ngModel)]="newStudent.subject3"> <br>
+<br>
+<button type="submit">SUBMIT</button>
+<button (click)="goBack()">BACK</button>
+</form>

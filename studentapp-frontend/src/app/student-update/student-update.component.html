@@ -1,0 +1,11 @@
+<h1><u>UPDATE STUDENT:</u></h1>
+<div>
+    <label>Student Name : </label><input type="text" name="studentname" [(ngModel)]="selectedStudent.studentName"><br>
+    <label>Gender : </label> <input type="radio" name="gender" value="M" [(ngModel)]="selectedStudent.gender"> M
+                            <input type="radio" name="gender" value="F" [(ngModel)]="selectedStudent.gender"> F<br>
+    <label>Subject1 :</label><input type="number" name="subject1" [(ngModel)]="selectedStudent.subject1"><br>
+    <label>Subject2 :</label><input type="number" name="subject2" [(ngModel)]="selectedStudent.subject2"><br>
+    <label>Subject3 :</label><input type="number" name="subject3" [(ngModel)]="selectedStudent.subject3"><br>
+</div>
+<button (click)="updateStudent()">UPDATE</button>
+<button (click)="goBack()">BACK</button>
